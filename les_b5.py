@@ -94,7 +94,6 @@ runic_skills = []
 
 def main():
     for i in skills:
-
         new_list = i
         for letter, value in alphabet.items():
             new_list = new_list.replace(letter, value)
