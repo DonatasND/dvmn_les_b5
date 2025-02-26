@@ -89,11 +89,12 @@ alphabet = {
     ' ': ' ',
 }
 
+
 runic_skills = []
 
-
-if __name__ == '__main__':
+def main():
     for i in skills:
+
         new_list = i
         for letter, value in alphabet.items():
             new_list = new_list.replace(letter, value)
@@ -118,3 +119,5 @@ if __name__ == '__main__':
         os.makedirs('folder', exist_ok=True)
         file_operations.render_template("template.svg", f"folder/form_{i}.svg", context)
 
+if __name__ == '__main__':
+    main()
