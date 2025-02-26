@@ -1,5 +1,4 @@
 
-
 from faker import Faker
 import random
 import file_operations
@@ -92,6 +91,7 @@ alphabet = {
 
 runic_skills = []
 
+
 def main():
     for i in skills:
         new_list = i
@@ -117,6 +117,7 @@ def main():
         }
         os.makedirs('folder', exist_ok=True)
         file_operations.render_template("template.svg", f"folder/form_{i}.svg", context)
+
 
 if __name__ == '__main__':
     main()
