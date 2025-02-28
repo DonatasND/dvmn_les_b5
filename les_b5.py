@@ -5,9 +5,9 @@ import file_operations
 import os
 
 
-fake=Faker("ru_RU")
+FAKE=Faker("ru_RU")
 
-skills = [
+SKILLS = [
     'Стремительный прыжок', 
     'Электрический выстрел', 
     'Ледяной удар', 
@@ -18,7 +18,7 @@ skills = [
     'Огненный заряд',
 ]
 
-alphabet = {
+ALPHABET = {
     'а': 'а͠', 
     'б': 'б̋', 
     'в': 'в͒͠',
@@ -93,19 +93,19 @@ runic_skills = []
 
 
 def main():
-    for i in skills:
+    for i in SKILLS:
         new_list = i
-        for letter, value in alphabet.items():
+        for letter, value in ALPHABET.items():
             new_list = new_list.replace(letter, value)
         runic_skills.append(new_list)
 
     for i in range(1, 11):
         num_skills = random.sample(runic_skills, 3)
         context = {
-            "first_name": fake.first_name_male(),
-            "last_name": fake.last_name_male(),
-            "town" : fake.city(),
-            "job" : fake.job(),
+            "first_name": FAKE.first_name_male(),
+            "last_name": FAKE.last_name_male(),
+            "town" : FAKE.city(),
+            "job" : FAKE.job(),
             "strength" : random.randint(3, 18),
             "agility" : random.randint(3, 18),
             "endurance" : random.randint(3, 18),
