@@ -5,7 +5,7 @@ import file_operations
 import os
 
 
-FAKE=Faker("ru_RU")
+FAKE = Faker("ru_RU")
 
 SKILLS = [
     'Стремительный прыжок', 
@@ -89,11 +89,9 @@ ALPHABET = {
 }
 
 
-runic_skills = []
-
-
 def main():
     for i in SKILLS:
+        runic_skills = []
         new_list = i
         for letter, value in ALPHABET.items():
             new_list = new_list.replace(letter, value)
