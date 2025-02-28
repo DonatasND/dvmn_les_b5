@@ -90,8 +90,8 @@ ALPHABET = {
 
 
 def main():
+    runic_skills = []
     for i in SKILLS:
-        runic_skills = []
         new_list = i
         for letter, value in ALPHABET.items():
             new_list = new_list.replace(letter, value)
